@@ -22,8 +22,8 @@ class Comment(db.Model):
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(255))
-    displayName = db.Column(db.String(255))
-    hash = db.Column(db.String(41))
+    display_name = db.Column(db.String(255))
+    hash = db.Column(db.String(100)) # should be plenty for bcrypt
     email = db.Column(db.String(255))
     join_date = db.Column(db.DateTime)
     verified = db.Column(db.Boolean)
